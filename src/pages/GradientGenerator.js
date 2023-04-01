@@ -36,13 +36,13 @@ const downloadImage = () => {
           />
 
           
-          <div className="relative h-[80vh] w-screen flex flex-col items-center justify-center z-10">
+          <div className="relative h-[60vh] md:h-[80vh] w-screen flex flex-col items-center justify-center z-10">
                
-               <h1 className="flex items-start font-bold text-4xl sm:text-5xl md:text-6xl leading-normal">Gradient Generator</h1>
+               <h1 className="flex items-start text-black font-bold text-4xl sm:text-5xl md:text-6xl leading-normal">Gradient Generator</h1>
                <div className="flex justify-center space-x-2 w-full mt-8">
                <label className="cursor-pointer">
                     <div className="bg-white hover:opacity-80 flex space-x-2 items-center pl-8 pr-3 py-1.5 rounded-full transition duration-300">
-                         <span className="font-medium uppercase">{color1}</span>
+                         <span className="font-medium uppercase text-black">{color1}</span>
                          <input
                               id="colorBox"
                               className=""
@@ -54,7 +54,7 @@ const downloadImage = () => {
                </label>
                <label className="cursor-pointer">
                     <div className="bg-white hover:opacity-80 flex space-x-2 items-center pl-8 pr-3 py-1.5 rounded-full transition duration-300">
-                         <span className="font-medium uppercase">{color2}</span>
+                         <span className="font-medium uppercase text-black">{color2}</span>
                          <input
                               id="colorBox"
                               className=""
@@ -75,8 +75,8 @@ const downloadImage = () => {
                </div>
 
           </div>
-          <div className="relative flex items-center justify-center w-screen">
-               <p className=""><a href="https://twitter.com/NickDevCode?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @NickDevCode</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+          <div className="relative flex items-center justify-center w-full bg-transparent">
+               <a href="https://twitter.com/NickDevCode?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
     </div>
   );
