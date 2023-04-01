@@ -1,3 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#colorBox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 36px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+#colorBox::-webkit-color-swatch {
+  border-radius: 30px;
+  border: 1.5px solid #e5e7eb;
+}
+#colorBox::-moz-color-swatch {
+  border-radius: 30px;
+  border: 1.5px solid #e5e7eb;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
