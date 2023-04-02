@@ -11,7 +11,7 @@ const downloadImage = () => {
   const { width, height } = node.getBoundingClientRect();
   
   const canvas = document.createElement('canvas');
-  canvas.width = 4800;
+  canvas.width = 5200;
   canvas.height = 3200;
   
   const context = canvas.getContext('2d');
@@ -24,6 +24,20 @@ const downloadImage = () => {
     fileSaver.saveAs(blob, 'Gradient.png');
   });
 };
+
+  const generateRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  const handleRandomGradient = () => {
+    setColor1(generateRandomColor());
+    setColor2(generateRandomColor());
+  };
 
   return (
     <div className="h-full w-full">
@@ -65,12 +79,15 @@ const downloadImage = () => {
                     </div>
                </label>
                </div>
-               <div className="relative flex mt-12 z-10">
+               <div className="relative flex space-x-2 mt-12 z-10">
+                    <button className="bg-black hover:opacity-80 text-white font-bold py-2.5 px-6 rounded-full flex space-x-1" onClick={handleRandomGradient}>
+                         Random Gradient
+                    </button>
                     <button className="bg-black hover:opacity-80 text-white font-bold py-2.5 px-6 rounded-full flex space-x-1" onClick={downloadImage}>
+                         <span>Download .PNG</span>
                          <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                               <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                          </svg>
-                         <span>Download .PNG</span>
                     </button>
                </div>
 
